@@ -73,6 +73,7 @@ namespace Softito
                     }
 
                     Console.Write("Bir masa seçin: ");
+                    // Seçilen masa numarası geçerli mi kontrol
                     if (int.TryParse(Console.ReadLine(), out int masaNo) && masaNo >= 1 && masaNo <= 10 && masalar[masaNo - 1] == 1)
                     {
                         bool devam = true;
@@ -105,6 +106,7 @@ namespace Softito
                                 {
                                     Console.Write("\nSeçiminizi yapınız: ");
                                     string urunSecim = Console.ReadLine();
+                                    // Geçerli içecek numarası kontlorü
                                     if (int.TryParse(urunSecim, out int secim) && secim >= 1 && secim <= icecekler.Length)
                                     {
                                         Console.Write("Kaç adet almak istersiniz? ");
@@ -140,6 +142,7 @@ namespace Softito
                                 {
                                     Console.Write("\nSeçiminizi yapınız: ");
                                     string urunSecim = Console.ReadLine();
+                                    // Geçerli yiyecek numarası kontrolü
                                     if (int.TryParse(urunSecim, out int secim) && secim >= 1 && secim <= yiyecekler.Length)
                                     {
                                         Console.Write("Kaç adet almak istersiniz? ");
@@ -203,7 +206,7 @@ namespace Softito
                     // Kasa işlemi
                     Console.WriteLine("\n=== KASA İŞLEMİ ===");
                     Console.Write("Kapatmak istediğiniz masa numarasını giriniz (1-10): ");
-                    
+                    // Masanın açık olup olmadığı ve geçerli masa numarası kontrolü
                     if (int.TryParse(Console.ReadLine(), out int masaNo) && masaNo >= 1 && masaNo <= 10 && masalar[masaNo - 1] == 1)
                     {
                         double toplamTutar = 0;
